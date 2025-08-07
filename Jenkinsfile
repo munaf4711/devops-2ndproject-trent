@@ -5,12 +5,16 @@ pipeline {
         }
     }
 
-   stages {
-       stage('clone the code from github') {
-           steps {
-               git branch: 'main', url: 'https://github.com/munaf4711/devops-2ndproject-trent.git'
-           }
-       }
+environment {
+    PATH = "/opt/apache-maven-3.9.11/bin:$PATH"
+}
+    stages {
+       stage('build') {
+         steps {
+            sh 'mvn clean deploy'
+         }
+    }
+
    }
 }
 
