@@ -1,9 +1,9 @@
 pipeline {
-    agent {
-        node {
-            label'maven'
-        }
-    }
+    agent {
+        node {
+            label 'maven'
+        }
+    }
 
     stages {
         stage('clone the code from github') {
