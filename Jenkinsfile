@@ -5,12 +5,12 @@ pipeline {
         }
     }
 
-    stages {
-        stage('clone the code from github') {
-            steps {
-                git branch: 'main', url: 'https://https://github.com/ravdy/tweet-trend.git'
-            }
-        }
-    }
+   stages {
+       stage('clone the code from github') {
+           steps {
+               git branch: 'main', url: 'https://https://github.com/ravdy/tweet-trend.git'
+           }
+       }
+   }
 }
 
