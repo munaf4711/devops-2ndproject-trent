@@ -1,20 +1,16 @@
 pipeline {
-    agent {
-        node {
-            label 'maven'
-        }
-    }
+    agent {
+        node {
+            label'maven'
+        }
+    }
 
-environment {
-    PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
-}
-    stages {
-       stage('build') {
-         steps {
-            sh 'mvn clean deploy'
-         }
-    }
-
-   }
+    stages {
+        stage('clone the code from github') {
+            steps {
+                git branch: 'main', url: 'https://github.com/munaf4711/devops-2ndproject-trent.git'
+            }
+        }
+    }
 }
 
