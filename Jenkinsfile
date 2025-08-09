@@ -1,16 +1,15 @@
 pipeline {
-    agent {
-        node {
-            label'maven'
-        }
-    }
+    agent {
+        node {
+            label 'maven'
+        }
+    }
 
-    stages {
-        stage('clone the code from github') {
-            steps {
-                git branch: 'main', url: 'https://github.com/munaf4711/devops-2ndproject-trent.git'
-            }
-        }
-    }
+   stages {
+       stage('clone the code from github') {
+           steps {
+               git branch: 'main', url: 'https://github.com/munaf4711/devops-2ndproject-trent.git'
+           }
+       }
+   }
 }
-
